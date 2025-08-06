@@ -1,0 +1,12 @@
+.airplane-icon {
+    font-size: 48px;
+    color: grey;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .airplane-icon:hover {
+    transform: scale(1.2);
+    color: blue;
+  }
+  
