@@ -1,0 +1,64 @@
+{
+   "city": [
+       {
+            "name": "New York",
+            "country": "United States of America",
+            "coordinates": [40.7128, -74.0060],
+            "continent": "North America"
+       },
+       {
+            "name": "Los Angeles",
+            "country": "United States of America",
+            "coordinates": [34.0522, 118.2437],
+            "continent": "North America"
+       },
+       {
+            "name": "Montreal",
+            "country": "Canada",
+            "coordinates": [45.5017, -73.5673],
+            "continent": "North America"
+       },
+       {
+            "name": "Toronto",
+            "country": "Canada",
+            "coordinates": [43.6532, -79.3832],
+            "continent": "North America"
+       },
+       {
+            "name": "Tokyo",
+            "country": "Japan",
+            "coordinates": [35.6895, 139.6917],
+            "continent": "Asia"
+       },
+       {
+            "name": "Beijing",
+            "country": "China",
+            "coordinates": [39.9042, 116.4074],
+            "continent": "Asia"
+       },
+       {
+            "name": "Bangkok",
+            "country": "Thailand",
+            "coordinates": [13.7563, 100.5018],
+            "continent": "Asia"
+       },
+       {
+            "name": "Seoul",
+            "country": "South Korea",
+            "coordinates": [37.5665, 126.9780],
+            "continent": "Asia"
+       },
+       {
+            "name": "Mumbai",
+            "country": "India",
+            "coordinates": [19.0760, 72.8777],
+            "continent": "Asia"
+       },
+       {
+            "name": "Taipei",
+            "country": "Taiwan",
+            "coordinates": [25.0330, 121.5654],
+            "continent": "Asia"
+       }
+   ]
+}
