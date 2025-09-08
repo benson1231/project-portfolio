@@ -1,0 +1,30 @@
+name: CI/CD Demo
+
+on:
+  push:
+    branches: [ main ]   # 當 push 到 main 分支才觸發
+  pull_request:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest -q
+
+  deploy:
+    needs: build-test   # 測試通過才執行
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fake deploy step
+        run: echo "🚀 Deploying my app..."
