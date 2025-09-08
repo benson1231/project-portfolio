@@ -2,4 +2,4 @@ data/
 .DS_store
 .*
 !.gitignore
-！github/
+！.github/
