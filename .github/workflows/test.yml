@@ -2,8 +2,9 @@ name: CI/CD Demo
 
 on:
   push:
-    - main 
-    - dev
+    branches: 
+      - main 
+      - dev
   pull_request:
 
 jobs:
