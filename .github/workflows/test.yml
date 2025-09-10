@@ -2,7 +2,8 @@ name: CI/CD Demo
 
 on:
   push:
-    branches: [ main ]   # 當 push 到 main 分支才觸發
+    - main 
+    - dev
   pull_request:
 
 jobs:
