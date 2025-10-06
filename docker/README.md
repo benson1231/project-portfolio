@@ -16,3 +16,14 @@ docker image prune
 docker image inspect <>
 docker cp <> <img:path>
 docker run -name <name> <>
+docker tag <repo:tag> <hub-user:hub-repo>
+docker login
+docker volume ls
+docker volume create <>
+docker volume rm <>
+docker volume prune
+docker volume inspect <>
+docker run -v <>
+docker run -v </app:/app>
+docker run -v </app:/app:ro>
+docker history <image>
