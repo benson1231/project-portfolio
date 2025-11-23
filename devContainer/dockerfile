@@ -1,0 +1,34 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV CONDA_NO_AUTOINIT=1
+
+# Basic tools
+RUN apt-get update && apt-get install -y \
+    wget curl git ca-certificates build-essential \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Install Miniconda
+ENV CONDA_DIR=/opt/conda
+RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda.sh \
+    && bash /tmp/miniconda.sh -b -p $CONDA_DIR \
+    && rm /tmp/miniconda.sh
+
+ENV PATH="$CONDA_DIR/bin:$PATH"
+SHELL ["/bin/bash", "-c"]
+
+# Force conda-forge
+RUN echo "channels:" > $CONDA_DIR/.condarc \
+    && echo "  - conda-forge" >> $CONDA_DIR/.condarc \
+    && echo "channel_priority: strict" >> $CONDA_DIR/.condarc
+
+# Create environment
+RUN conda create -n dev python=3.13 -y
+
+# Initialize conda
+RUN $CONDA_DIR/bin/conda init bash
+
+WORKDIR /workspace
+
+# ⭐ Auto-start into dev env
+CMD ["bash", "-c", "source ~/.bashrc && conda activate dev && exec bash"]
