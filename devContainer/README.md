@@ -9,8 +9,3 @@ conda activate dev
 ```bash
 conda install numpy pandas -y
 ```
-
-# 重建環境
-```bash
-
-```
